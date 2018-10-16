@@ -6,6 +6,6 @@ export function handler(event, context, callback) {
   console.log(event);
   callback(null, {
     statusCode: 200,
-    body: JSON.stringify({ msg: global.messageOfTheDay, ...obj })
+    body: JSON.stringify({ msg: config.js.messageOfTheDay, ...obj })
   });
 }
