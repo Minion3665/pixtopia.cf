@@ -40,7 +40,7 @@ class App extends Component {
               document.title = "Pixtopia";
           </script>
           <p>
-            Pixtopia Gaming
+            Pixtopia Gaming Site. Down For Maintenance. Please Bear With Us
           </p>
           <LambdaDemo />
         </header>
