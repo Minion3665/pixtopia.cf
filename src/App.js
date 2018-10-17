@@ -33,11 +33,11 @@ class LambdaDemo extends Component {
 
 class App extends Component {
   render() {
-    return (
-      <script>
-      document.title = "Pixtopia";
-      </script>
+    return {
       <div className="App">
+        <script>
+        document.title = "Pixtopia";
+        </script>
         <header className="App-header">
           <LambdaDemo />
         </header>
