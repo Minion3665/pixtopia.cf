@@ -17,6 +17,7 @@ class LambdaDemo extends Component {
   };
 
   render() {
+    document.title = "Pixtopia";
     const { loading, msg } = this.state;
 
     return (
@@ -32,7 +33,6 @@ class LambdaDemo extends Component {
 }
 
 class App extends Component {
-  document.title = "Pixtopia";
   render() {
     return (
       <div className="App">
