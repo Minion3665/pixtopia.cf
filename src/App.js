@@ -32,13 +32,11 @@ class LambdaDemo extends Component {
 }
 
 class App extends Component {
+  document.title = "Pixtopia";
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <script>
-              document.title = "Pixtopia";
-          </script>
           <p>
             Pixtopia Gaming Site. Down For Maintenance. Please Bear With Us
           </p>
