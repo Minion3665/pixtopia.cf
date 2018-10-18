@@ -37,7 +37,6 @@ class App extends Component {
           <span className="link activelink">Home</span>
           <a href="bugreports.html" className="link">Report a bug</a>
         </div>
-        </header>
       </div>
     );
   }
