@@ -16,9 +16,9 @@ class Lambda extends Component {
 
   render() {
     const { loading, msg } = this.state;
+    document.title({JSON.stringify(msg)})
     return (
       <React.Fragment>
-        <title>{JSON.stringify(msg)}</title>
         <b>Under Development, Motd: {msg}</b>
       </React.Fragment>
     );
