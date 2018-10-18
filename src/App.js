@@ -17,8 +17,8 @@ class Lambda extends Component {
   };
 
   render() {
-    let motd = {this.getMotd};
-    console.log(this.motd);
+    let motd = {getMotd};
+    console.log(motd);
     if (motd == null){
         document.title = "Pixtopia - MOTD: Welcome To Pixtopia";
     } else {
