@@ -8,7 +8,7 @@ class Lambda extends Component {
     this.getMotd=this.getMotd.bind(this);
   }
 
-  const getMotd() => {
+  const function getMotd() => {
 
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
