@@ -5,9 +5,10 @@ class Lambda extends Component {
   constructor(props) {
     super(props);
     this.state = { loading: false, msg: null };
+    this.getMotd=this.getMotd.bind(this);
   }
 
-  getMotd() = e => {
+  getMotd() {
 
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
