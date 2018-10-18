@@ -16,7 +16,6 @@ class Lambda extends Component {
 
   render() {
     let motd = this.getMotd();
-    console.log(motd);
     if (motd == null){
         document.title = "Pixtopia - MOTD: Welcome To Pixtopia";
     } else {
@@ -25,7 +24,7 @@ class Lambda extends Component {
     const { loading, msg } = this.state;
 
     return (
-        <p></p>
+        <p>Welcome</p>
     );
   }
 }
