@@ -43,7 +43,6 @@ class App extends Component {
             </div>
             <div class="header2" style="text-align:center">
               <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-              <ShowMOTD />
             </div>
             <br/>
         </header>
