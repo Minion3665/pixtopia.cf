@@ -8,10 +8,13 @@ class ShowMOTD extends Component {
   }
 
   componentDidMount() {
-    this.setState({ loading: true});
-    fetch('/.netlify/functions/getMotd')
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }));
+    const { loading, msg } = this.state;
+    if ({msg} == null) {
+      this.setState({ loading: true});
+      fetch('/.netlify/functions/getMotd')
+        .then(response => response.json())
+        .then(json => this.setState({ loading: false, msg: json.msg }));
+    }
   };
 
   render() {
@@ -30,6 +33,10 @@ class App extends Component {
     return (
       <div>
         <div className="header">
+          <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
+          <ShowMOTD />
+        </div>
+        <div className="header2">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
