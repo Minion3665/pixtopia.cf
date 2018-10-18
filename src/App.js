@@ -18,7 +18,7 @@ class Lambda extends Component {
     const { loading, msg } = this.state;
     return (
       <p>
-        <button onLoad={this.handleGetMotd}>
+        <button onload={this.handleGetMotd}>
           {loading ? 'Loading...' : 'Call Lambda'}
         </button>
         <br />
