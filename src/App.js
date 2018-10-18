@@ -11,7 +11,7 @@ class Lambda extends Component {
     this.setState({ loading: true, msg: "Almost There..."});
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }));
+      .then(json => this.setState({ loading: false, msg: json.body }));
   };
 
   render() {
