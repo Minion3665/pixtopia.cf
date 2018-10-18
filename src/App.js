@@ -16,7 +16,7 @@ class Lambda extends Component {
 
   render() {
     const { loading, msg } = this.state;
-    this.getMotd();
+    this.handleGetMotd();
     return (
         <p>{msg}</p>
     );
