@@ -7,7 +7,7 @@ class Lambda extends Component {
     this.state = { loading: false, msg: null };
   }
 
-  getMotd() {
+  function getMotd() {
 
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
@@ -16,7 +16,7 @@ class Lambda extends Component {
   };
 
   render() {
-    motd = getMotd();
+    let motd = getMotd();
     console.log(motd);
     if (motd == null){
         document.title = "Pixtopia - MOTD: Welcome To Pixtopia";
