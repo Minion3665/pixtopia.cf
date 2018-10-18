@@ -18,6 +18,7 @@ class Lambda extends Component {
     const { loading, msg } = this.state;
     return (
       <title>{msg}</title>
+
       <b>Under Development, Motd: {msg}</b>
     );
   }
