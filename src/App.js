@@ -33,17 +33,10 @@ class App extends Component {
     return (
       <div>
         <header>
-            <div className="header" style="text-align:center">
-              <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-              <ShowMOTD />
-            </div>
-            <div className="bottombar">
-              <span className="link activelink">Home</span>
-              <a href="bugreports.html" className="link">Report a bug</a>
-            </div>
-            <div className="header2" style="text-align:center">
-              <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-            </div>
+            <ShowMOTD />
+            <span className="link activelink">Home</span>
+            <a href="bugreports.html" className="link">Report a bug</a>
+            <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
             <br/>
         </header>
       </div>
