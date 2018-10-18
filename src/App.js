@@ -7,13 +7,13 @@ class Lambda extends Component {
     this.state = { loading: false, msg: null };
   }
 
-  function getMotd() {
+  getMotd() => {
 
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.msg }));
-  }
+  };
 
   render() {
     let motd = getMotd();
