@@ -33,7 +33,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <html>
             <div class="header" style="text-align:center">
               <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
               <ShowMOTD />
