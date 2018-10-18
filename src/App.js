@@ -7,7 +7,7 @@ class Lambda extends Component {
     this.state = { loading: false, msg: null };
   }
 
-  handleGetMotd = () => {
+  componentDidMount() {
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
@@ -18,9 +18,6 @@ class Lambda extends Component {
     const { loading, msg } = this.state;
     return (
       <p>
-        <button componentDidMount={this.handleGetMotd}>
-          {loading ? 'Loading...' : 'Call Lambda'}
-        </button>
         <br />
         <span>{msg}</span>
       </p>
