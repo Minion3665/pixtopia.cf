@@ -15,17 +15,10 @@ class Lambda extends Component {
   };
 
   render() {
-    this.getMotd();
-    let motd = {msg};
-    if (motd == null){
-        document.title = "Pixtopia - MOTD: Welcome To Pixtopia";
-    } else {
-        document.title = "Pixtopia - MOTD: "+motd;
-    }
     const { loading, msg } = this.state;
-
+    this.getMotd();
     return (
-        <p>Welcome</p>
+        <p>{msg}</p>
     );
   }
 }
