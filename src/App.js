@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="header" style="text-align:center">
+        <div className="header">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
