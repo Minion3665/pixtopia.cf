@@ -5,16 +5,14 @@ class Lambda extends Component {
   constructor(props) {
     super(props);
     this.state = { loading: false, msg: null };
-    this.getMotd=this.getMotd.bind(this);
   }
 
-  const function getMotd() => {
-
+  handleGetMotd = () => {
     this.setState({ loading: true });
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.msg }));
-  }
+  };
 
   render() {
     let motd = null;
