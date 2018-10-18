@@ -16,7 +16,7 @@ class Lambda extends Component {
 
   render() {
     const { loading, msg } = this.state;
-    document.title = {msg}.msg;
+    document.title = "Welcome to Pixtopia - MOTD: "+{msg}.msg;
     return (
       <React.Fragment>
         <b>Under Development, Motd: {msg}</b>
