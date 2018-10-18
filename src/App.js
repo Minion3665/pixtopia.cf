@@ -4,11 +4,11 @@ import './App.css';
 class Lambda extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false, msg: null };
+    this.state = { loading: false, msg: "Loading MOTD..." };
   }
 
   componentDidMount() {
-    this.setState({ loading: true });
+    this.setState({ loading: true, msg: "Almost There..."});
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.msg }));
