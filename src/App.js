@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class LambdaDemo extends Component {
+class Lambda extends Component {
   constructor(props) {
     super(props);
     this.state = { loading: false, msg: null };
   }
 
-  handleClick = e => {
-    e.preventDefault();
+  getMotd() {
 
     this.setState({ loading: true });
-    fetch('/.netlify/functions/hello')
+    fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.msg }));
   };
 
   render() {
-    
-    document.title = "Pixtopia - MOTD: ";
+    motd = getMotd();
+    if (motd == null){
+        document.title = "Pixtopia - MOTD: Welcome To Pixtopia";
+    } else {
+        document.title = "Pixtopia - MOTD: "+motd;
+    }
     const { loading, msg } = this.state;
 
     return (
@@ -35,7 +38,7 @@ class App extends Component {
           <p>
             Pixtopia Gaming Site. Down For Maintenance. Please Bear With Us
           </p>
-          <LambdaDemo />
+          <Lambda />
         </header>
       </div>
     );
