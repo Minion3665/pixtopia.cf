@@ -9,7 +9,7 @@ class ShowMOTD extends Component {
 
   componentDidMount() {
     const { loading, msg } = this.state;
-    if ({msg} == null) {
+    if ({msg}.msg == null) {
       this.setState({ loading: true});
       fetch('/.netlify/functions/getMotd')
         .then(response => response.json())
