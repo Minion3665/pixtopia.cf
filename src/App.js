@@ -17,17 +17,12 @@ class LambdaDemo extends Component {
   };
 
   render() {
-    document.title = "Pixtopia";
+    
+    document.title = "Pixtopia - MOTD: ";
     const { loading, msg } = this.state;
 
     return (
-      <p>
-        <button onClick={this.handleClick}>
-          {loading ? 'Loading...' : 'Call Lambda'}
-        </button>
-        <br />
-        <span>{msg}</span>
-      </p>
+        <p></p>
     );
   }
 }
