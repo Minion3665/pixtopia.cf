@@ -29,11 +29,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div class="header" style="text-align:center">
+        <div className="header" style="text-align:center">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
-        <div class="bottombar">
+        <div className="bottombar">
           <span className="link activelink">Home</span>
           <a href="bugreports.html" className="link">Report a bug</a>
         </div>
