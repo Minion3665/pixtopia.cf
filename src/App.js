@@ -8,7 +8,6 @@ class pageContent extends Component {
   }
 
   render() {
-    const page = window.location.href;
     return (
       <React.Fragment>
         <h1>Hello world</h1>
