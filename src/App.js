@@ -2,7 +2,7 @@ import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
 
-class pageContent extends Component {
+class ShowPageContent extends Component {
   constructor(props) {
     super(props);
     this.state = { loading: false };
@@ -50,14 +50,14 @@ class App extends Component {
       <div>
         <div className="header">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-          <pageContent />
+          <ShowPageContent />
           <ShowMOTD />
         </div>
         <div className="header2">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
-        <pageContent />
+        <ShowPageContent />
         <div className="bottombar">
           <span className="link activelink">Home</span>
           <a href="bugreports.html" className="link">Report a bug</a>
