@@ -38,7 +38,6 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     return (
-      <Router>
         <div>
           <div className="header">
             <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
@@ -49,9 +48,6 @@ class App extends Component {
             <ShowMOTD />
           </div>
         </div>
-        <Route path="/:page" component={pageContent}>
-        </Route>
-      </Router>
     );
   }
 }
