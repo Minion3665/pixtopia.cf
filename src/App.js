@@ -9,7 +9,7 @@ class ShowPageContent extends Component {
   }
 
   render() {
-    const values = url.parse("http://pixtopia.cf/#page");
+    const values = url.parse(window.location.href);
     const page = values.hash;
     return (
       <React.Fragment>
