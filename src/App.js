@@ -11,11 +11,16 @@ class ShowPageContent extends Component {
   render() {
     const values = url.parse(window.location.href);
     const page = values.hash;
-    return (
-      <React.Fragment>
-        <h1>Hello world, {page} is where it is at!!!</h1>
-      </React.Fragment>
-    );
+    if (page == "home" || page == null || page == "") {
+      return (
+        Welcome To Pixtopia!
+      );
+    } else {
+      window.location.href = "/404";
+      return (
+        404 Error
+      );
+    }
   }
 }
 
