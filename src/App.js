@@ -60,6 +60,7 @@ class App extends Component {
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
+        Welcome all ye who come here
         <content />
         <div className="bottombar">
           <span className="link activelink">Home</span>
