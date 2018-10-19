@@ -11,7 +11,7 @@ class ShowPageContent extends Component {
   render() {
     const values = url.parse(window.location.href);
     const page = values.hash;
-    if (page == "home" || page == null || page == "") {
+    if (page === "home" || page === null || page === "") {
       return (
         <React.Fragment>
           Welcome To Pixtopia!
@@ -21,7 +21,7 @@ class ShowPageContent extends Component {
           </div>
         </React.Fragment>
       );
-    } else if (page == "#bugreport") {
+    } else if (page === "#bugreport") {
       return (
         <React.Fragment>
           <h3>Report A Bug</h3>
@@ -53,7 +53,7 @@ class ShowMOTD extends Component {
 
   componentDidMount() {
     const { loading, msg } = this.state;
-    if ({msg}.msg == null) {
+    if ({msg}.msg === null) {
       this.setState({ loading: true});
       fetch('/.netlify/functions/getMotd')
         .then(response => response.json())
