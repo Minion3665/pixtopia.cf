@@ -29,6 +29,25 @@ class ShowMOTD extends Component {
   }
 }
 
+class content extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+  };
+
+  render() {
+    const values = queryString.parse(this.props.location.search);
+    const page = values.page;
+    return (
+      <React.Fragment>
+        {page}
+      </React.Fragment>
+    );
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -41,6 +60,7 @@ class App extends Component {
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
         </div>
+        <content />
         <div className="bottombar">
           <span className="link activelink">Home</span>
           <a href="bugreports.html" className="link">Report a bug</a>
