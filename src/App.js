@@ -2,6 +2,21 @@ import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
 
+class content extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const page = window.location.href;
+    return (
+      <React.Fragment>
+        <h1>Hello world</h1>
+      </React.Fragment>
+    );
+  }
+}
+
 class ShowMOTD extends Component {
   constructor(props) {
     super(props);
@@ -24,21 +39,6 @@ class ShowMOTD extends Component {
     return (
       <React.Fragment>
         <b>Status: Under Development, Motd: {msg}</b>
-      </React.Fragment>
-    );
-  }
-}
-
-class content extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const page = window.location.href;
-    return (
-      <React.Fragment>
-        <h1>Hello world</h1>
       </React.Fragment>
     );
   }
