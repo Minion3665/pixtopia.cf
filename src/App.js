@@ -8,49 +8,6 @@ import {
   Link
 } from 'react-router-dom'
 
-class ShowPageContent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: false };
-  }
-
-  render() {
-    const values = url.parse(window.location.href);
-    const page = values.searchParams.get('page');
-    if (page === "home" || page === null || page === "") {
-      return (
-        <React.Fragment>
-          Welcome To Pixtopia!
-          <div className="bottombar">
-            <span className="link activelink">Home</span>
-            <a href="/bug" className="link">Report a bug</a>
-          </div>
-        </React.Fragment>
-      );
-    } else if (page === "bug") {
-      return (
-        <React.Fragment>
-          <h3>Report A Bug</h3>
-          <form name="bug reports" method="POST" netlify>
-            <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
-            <br/>
-            <button type="submit" value="Submit bug report">Tell Us!</button>
-          </form>
-          <div className="bottombar">
-            <a href="/home" className="link">Home</a>
-            <span className="link activelink">Report a bug</span>
-          </div>
-        </React.Fragment>
-      );
-    } else {
-      window.location.href = "/404";
-      return (
-        <h1>404 Error - Page Not Found</h1>
-      );
-    }
-  }
-}
-
 class ShowMOTD extends Component {
   constructor(props) {
     super(props);
@@ -92,7 +49,7 @@ class App extends Component {
             <ShowMOTD />
           </div>
         </div>
-        <Route path="/:id" component={pageContent}/>
+        <Route path="/:page" component={pageContent}/>
       </Router>
     );
   }
