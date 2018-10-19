@@ -34,9 +34,6 @@ class content extends Component {
     super(props);
   }
 
-  componentDidMount() {
-  };
-
   render() {
     const page = window.location.href;
     return (
