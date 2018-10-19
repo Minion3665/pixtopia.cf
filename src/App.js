@@ -96,7 +96,6 @@ class App extends Component {
             <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
             <ShowMOTD />
           </div>
-          <ShowPageContent />
         </div>
         <Route path="/:id" component={pageContent}/>
       </Router>
