@@ -21,7 +21,7 @@ class ShowPageContent extends Component {
           </div>
         </React.Fragment>
       );
-    } else if (page == "bugreport") {
+    } else if (page == "#bugreport") {
       return (
         <React.Fragment>
           <form name="bug reports" method="POST" netlify>
