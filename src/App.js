@@ -49,7 +49,8 @@ class App extends Component {
             <ShowMOTD />
           </div>
         </div>
-        <Route path="/:page" component={pageContent}/>
+        <Route path="/:page" component={pageContent}>
+        </Route>
       </Router>
     );
   }
