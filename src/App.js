@@ -32,8 +32,9 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     const values = queryString.parse(this.props.location.search);
-    if (values.page == null || values.page == "" || values.page == "home") {
+    if (true) {
       return (
+        {values.page}
         <div>
           <div className="header">
             <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
