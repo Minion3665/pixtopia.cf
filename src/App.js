@@ -17,7 +17,7 @@ class ShowPageContent extends Component {
           Welcome To Pixtopia!
           <div className="bottombar">
             <span className="link activelink">Home</span>
-            <a href="https://pixtopia.cf?page=bug" className="link">Report a bug</a>
+            <a href="/bug" className="link">Report a bug</a>
           </div>
         </React.Fragment>
       );
@@ -31,7 +31,7 @@ class ShowPageContent extends Component {
             <button type="submit" value="Submit bug report">Tell Us!</button>
           </form>
           <div className="bottombar">
-            <a href="https://pixtopia.cf?page=home" className="link">Home</a>
+            <a href="/home" className="link">Home</a>
             <span className="link activelink">Report a bug</span>
           </div>
         </React.Fragment>
@@ -71,7 +71,11 @@ class ShowMOTD extends Component {
     );
   }
 }
-
+const Child = ({ match }) => (
+  <div>
+    <h3>ID: {match.params.id}</h3>
+  </div>
+)
 class App extends Component {
   render() {
     return (
