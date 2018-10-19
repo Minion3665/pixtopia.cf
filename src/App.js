@@ -9,11 +9,11 @@ class ShowPageContent extends Component {
   }
 
   render() {
-    const values = url.parse(this.props.location);
+    const values = url.parse("http://pixtopia.cf/#page);
     const page = values.hash;
     return (
       <React.Fragment>
-        <h1>Hello world {page} is where it is at!!!</h1>
+        <h1>Hello world, {page} is where it is at!!!</h1>
       </React.Fragment>
     );
   }
