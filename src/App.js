@@ -42,7 +42,7 @@ class content extends Component {
     const page = values.hash;
     return (
       <React.Fragment>
-        <h1>{page}</h1>
+        <h1>Hello world, {page}</h1>
       </React.Fragment>
     );
   }
@@ -59,8 +59,8 @@ class App extends Component {
         <div className="header2">
           <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
           <ShowMOTD />
-          <content />
         </div>
+        <content />
         <div className="bottombar">
           <span className="link activelink">Home</span>
           <a href="bugreports.html" className="link">Report a bug</a>
