@@ -1,6 +1,6 @@
+import queryString from 'query-string';
 import React, { Component } from 'react';
 import './App.css';
-import queryString from 'query-string'
 
 class ShowMOTD extends Component {
   constructor(props) {
@@ -31,26 +31,22 @@ class ShowMOTD extends Component {
 
 class App extends Component {
   render() {
-    const values = queryString.parse(this.props.location.search);
-      return (
-        <React.Fragment>
-          {values}.page
-          <div>
-            <div className="header">
-              <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-              <ShowMOTD />
-            </div>
-            <div className="header2">
-              <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
-              <ShowMOTD />
-            </div>
-            <div className="bottombar">
-              <span className="link activelink">Home</span>
-              <a href="bugreports.html" className="link">Report a bug</a>
-            </div>
-          </div>
-        </React.Fragment>
-      );
+    return (
+      <div>
+        <div className="header">
+          <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
+          <ShowMOTD />
+        </div>
+        <div className="header2">
+          <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
+          <ShowMOTD />
+        </div>
+        <div className="bottombar">
+          <span className="link activelink">Home</span>
+          <a href="bugreports.html" className="link">Report a bug</a>
+        </div>
+      </div>
+    );
   }
 }
 
