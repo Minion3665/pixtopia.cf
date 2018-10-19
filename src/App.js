@@ -10,7 +10,7 @@ class ShowPageContent extends Component {
 
   render() {
     const values = url.parse(window.location.href);
-    const page = values.query.page;
+    const page = values.searchParams.get('page');
     if (page === "home" || page === null || page === "") {
       return (
         <React.Fragment>
