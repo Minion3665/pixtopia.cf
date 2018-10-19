@@ -76,7 +76,7 @@ class ShowMOTD extends Component {
     );
   }
 }
-class Child = ({ match }) => (
+class Child = { match } => (
   render () {
     return (
   	  <div>
