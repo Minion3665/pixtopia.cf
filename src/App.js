@@ -11,7 +11,7 @@ class ShowPageContent extends Component {
   render() {
     const values = url.parse(window.location.href);
     const page = values.hash;
-    if (page === "home" || page === null || page === "") {
+    if (page === "#home" || page === null || page === "#") {
       return (
         <React.Fragment>
           Welcome To Pixtopia!
