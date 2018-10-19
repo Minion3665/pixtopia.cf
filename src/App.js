@@ -1,6 +1,7 @@
 import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
+import pageContent from './pageContent'
 import {
   BrowserRouter as Router,
   Route,
@@ -97,7 +98,7 @@ class App extends Component {
           </div>
           <ShowPageContent />
         </div>
-        <Route path="/:id" component={Child}/>
+        <Route path="/:id" component={pageContent}/>
       </Router>
     );
   }
