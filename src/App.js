@@ -38,8 +38,7 @@ class content extends Component {
   };
 
   render() {
-    const values = url.parse(window.location.href);
-    const page = values.hash;
+    const page = window.location.href;
     return (
       <React.Fragment>
         <h1>Hello world</h1>
