@@ -32,7 +32,6 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     const values = queryString.parse(this.props.location.search);
-    if (true) {
       return (
         <React.Fragment>
           {values}.page
@@ -52,7 +51,6 @@ class App extends Component {
           </div>
         </React.Fragment>
       );
-    }
   }
 }
 
