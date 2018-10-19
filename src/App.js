@@ -76,7 +76,7 @@ class ShowMOTD extends Component {
     );
   }
 }
-class Child = { match } => (
+class Child extends Component {
   render () {
     return (
   	  <div>
@@ -84,7 +84,8 @@ class Child = { match } => (
   	  </div>
     )
   }
-)
+}
+
 class App extends Component {
   render() {
     return (
