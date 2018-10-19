@@ -5,6 +5,7 @@ import './App.css';
 class pageContent extends Component {
   constructor(props) {
     super(props);
+    this.state = { loading: false };
   }
 
   render() {
