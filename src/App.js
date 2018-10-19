@@ -34,7 +34,7 @@ class App extends Component {
     const values = queryString.parse(this.props.location.search);
     if (true) {
       return (
-        {values.page}
+        {values}.page
         <div>
           <div className="header">
             <font size="20" color="#aa0000">Welcome To Pixtopia</font><br/>
