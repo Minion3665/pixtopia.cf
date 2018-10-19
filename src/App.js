@@ -15,6 +15,24 @@ class ShowPageContent extends Component {
       return (
         <React.Fragment>
           Welcome To Pixtopia!
+          <div className="bottombar">
+            <span className="link activelink">Home</span>
+            <a href="#bugreport" className="link">Report a bug</a>
+          </div>
+        </React.Fragment>
+      );
+    } else if (page == "bugreport") {
+      return (
+        <React.Fragment>
+          <form name="bug reports" method="POST" netlify>
+            <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
+            <br/>
+            <button type="submit" value="Submit bug report">Tell Us!</button>
+          </form>
+          <div className="bottombar">
+            <a href="#home" className="link">Home</a>
+            <span className="link activelink">Report a bug</span>
+          </div>
         </React.Fragment>
       );
     } else {
@@ -66,10 +84,6 @@ class App extends Component {
           <ShowMOTD />
         </div>
         <ShowPageContent />
-        <div className="bottombar">
-          <span className="link activelink">Home</span>
-          <a href="bugreports.html" className="link">Report a bug</a>
-        </div>
       </div>
     );
   }
