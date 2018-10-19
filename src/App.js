@@ -13,12 +13,14 @@ class ShowPageContent extends Component {
     const page = values.hash;
     if (page == "home" || page == null || page == "") {
       return (
-        Welcome To Pixtopia!
+        <React.Fragment>
+          Welcome To Pixtopia!
+        </React.Fragment>
       );
     } else {
       window.location.href = "/404";
       return (
-        404 Error
+        <h1>404 Error - Page Not Found</h1>
       );
     }
   }
