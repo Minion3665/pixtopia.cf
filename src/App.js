@@ -1,6 +1,7 @@
 import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
+import './pageContent';
 import {
   BrowserRouter as Router,
   Route,
