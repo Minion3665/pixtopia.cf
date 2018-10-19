@@ -77,9 +77,13 @@ class ShowMOTD extends Component {
   }
 }
 const Child = ({match}) => {
-  	<div>
-    	<h3>ID: {match.params.id}</h3>
-  	</div>
+  render() {
+    return (
+  	  <div>
+    	  <h3>ID: {match.params.id}</h3>
+  	  </div>
+    );
+  }
 }
 
 class App extends Component {
