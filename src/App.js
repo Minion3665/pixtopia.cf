@@ -1,4 +1,4 @@
-import queryString from 'query-string';
+import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
 
@@ -38,8 +38,8 @@ class content extends Component {
   };
 
   render() {
-    const values = queryString.parse(this.props.location.search);
-    const page = values.page;
+    const values = url.parse(this.props.location);
+    const page = values.hash;
     return (
       <React.Fragment>
         <h1>{page}</h1>
