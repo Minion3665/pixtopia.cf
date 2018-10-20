@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router';
+import { Route } from 'react-router';
+import { BrowserRouter, link } from 'react-router-dom';
 
 import App from './pages/index/index.js';
 import bugreports from './pages/bugreports/bugreports.js';
