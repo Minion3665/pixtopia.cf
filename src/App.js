@@ -9,11 +9,11 @@ class App extends Component {
         <div>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/topics">Report A Bug</Link>
+          <Link to="/report">Report A Bug</Link>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
+            <Route path="/report" component={Report} />
             <Route component={NotFound} />
           </Switch>
         </div>
