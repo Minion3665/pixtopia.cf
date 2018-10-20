@@ -39,6 +39,7 @@ class App extends Component {
     return (
       <Router>
         <Route path="/hello" component={ShowMOTD}/>
+        <li><Link to="/hello"></Link></li>
       </Router>
     );
   }
