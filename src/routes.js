@@ -7,12 +7,12 @@ import bugreports from './pages/bugreports/bugreports.js';
 import notFound from './pages/404/404.js';
 
 const Routes = (props) => (
-  <BrowserRouter>
+  <switch>
     <div>
       <Route path="/" component={App}/>
       <Route path="/bugreports" component={bugreports}/>
       <Route path="*" component={notFound}/>
     </div>
-  </BrowserRouter>
+  </switch>
 );
 export default Routes;
