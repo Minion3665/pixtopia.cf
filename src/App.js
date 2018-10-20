@@ -1,11 +1,8 @@
 import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router';
 
 class ShowMOTD extends Component {
   constructor(props) {
@@ -37,7 +34,7 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     return (
-      <li><Link to="/hello"></Link></li>
+      <li><Link to="/hello">Hello</Link></li>
     );
   }
 }
