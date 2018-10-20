@@ -34,7 +34,7 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     return (
-      <li><Link to="/hello">Hello</Link></li>
+      {this.props.children}
     );
   }
 }
