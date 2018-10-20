@@ -13,9 +13,9 @@ class App extends Component {
           <Route component={NotFound} />
         </Switch>
         <div className="bottombar">
-          <Link to="/" activeClassName="activelink">Home</Link>
-          <Link to="/about" activeClassName="activelink">About Pixtopia</Link>
-          <Link to="/report" activeClassName="activelink">Bug Reports</Link>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Pixtopia</Link>
+          <Link to="/report">Bug Reports</Link>
         </div>
       </Router>
     );
