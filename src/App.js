@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-ro
 class App extends Component {
   render () {
     return (
-      <React.Fragment>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -19,7 +18,6 @@ class App extends Component {
           <Link to="/about" activeClassName="activelink">About Pixtopia</Link>
           <Link to="/report" activeClassName="activelink">Bug Reports</Link>
         </div>
-      </React.Fragment>
     );
   }
 }
