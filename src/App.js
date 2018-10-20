@@ -19,7 +19,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/report" component={BugReport} />
+              <Route path="/report" component={Report} />
               <Route component={NotFound} />
             </Switch>
           </Router>
@@ -53,27 +53,11 @@ const NotFound = () => (
 );
 
 const Report = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.path}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.path}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
+  <form name="bug reports" method="POST" netlify>
+    <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
+    <br />
+    <button type="submit" value="Submit bug report">Tell Us!</button>
+  </form>
 );
 
 const Topic = ({ match }) => (
