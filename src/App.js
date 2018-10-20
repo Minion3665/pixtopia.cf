@@ -16,13 +16,12 @@ class App extends Component {
             <ShowMOTD />
           </div>
           <div className="bottombar">
-            <NavLink to="/home" className="link" activeClassName="activelink">Home</NavLink>
+            <NavLink exact to="/" className="link" activeClassName="activelink">Home</NavLink>
             <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
             <NavLink to="/report" className="link" activeClassName="activelink">Bug Reports</NavLink>
           </div>
           <Switch>
-            <Route path="/" component={RedirectToHome} />
-            <Route path="/home" component={Home} />
+            <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/report" component={Report} />
             <Route path="/reportsuccess" component={ReportSuccess} />
@@ -33,10 +32,6 @@ class App extends Component {
     );
   }
 }
-
-const RedirectToHome = () => (
-  <Redirect to="/home" />
-);
 const Home = () => (
   <div>
     <h2>Home</h2>
