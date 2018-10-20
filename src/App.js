@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-ro
 class App extends Component {
   render () {
     return (
-      <Switch>
+      <Router>
         <div>
           <ul>
             <li>
@@ -20,12 +20,14 @@ class App extends Component {
           </ul>
     
           <hr />
-
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
-      </Switch>
+      </Router>
     );
   }
 }
