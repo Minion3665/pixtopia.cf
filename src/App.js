@@ -1,7 +1,7 @@
 import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { Router, Route, Switch } from 'react-router';
 
 class ShowMOTD extends Component {
