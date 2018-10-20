@@ -37,9 +37,7 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     return (
-      <Router>
-        <li><Link to="/hello"></Link></li>
-      </Router>
+      <li><Link to="/hello"></Link></li>
     );
   }
 }
