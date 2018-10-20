@@ -6,24 +6,14 @@ class App extends Component {
   render () {
     return (
       <React.Fragment>
-        <div>
-          <div className="header">
-            <font size="20" color="#aa0000">Welcome To Pixtopia</font><br />
-            <ShowMOTD />
-          </div>
-          <div className="header2">
-            <font size="20" color="#aa0000">Welcome To Pixtopia</font><br />
-            <ShowMOTD />
-          </div>
-          <Router>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/report" component={Report} />
-              <Route component={NotFound} />
-            </Switch>
-          </Router>
-        </div>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/report" component={Report} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
         <div className="bottombar">
           <Link to="/" activeClassName="activelink">Home</Link>
           <Link to="/about" activeClassName="activelink">About Pixtopia</Link>
