@@ -16,9 +16,9 @@ class App extends Component {
             <ShowMOTD />
           </div>
           <div className="bottombar">
-            <NavLink to="/" activeClassName="activelink">Home</NavLink>
-            <NavLink to="/about" activeClassName="activelink">About Pixtopia</NavLink>
-            <NavLink to="/report" activeClassName="activelink">Bug Reports</NavLink>
+            <NavLink to="/" className="link" activeClassName="activelink">Home</NavLink>
+            <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
+            <NavLink to="/report" className="link" activeClassName="activelink">Bug Reports</NavLink>
           </div>
           <Switch>
             <Route exact path="/" component={Home} />
