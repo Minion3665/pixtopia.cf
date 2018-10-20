@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
 
 class App extends Component {
   render () {
@@ -16,9 +16,9 @@ class App extends Component {
             <ShowMOTD />
           </div>
           <div className="bottombar">
-            <Link to="/" className="link" activeClassName="activelink">Home</Link>
-            <Link to="/about" className="link" activeClassName="activelink">About Pixtopia</Link>
-            <Link to="/report" className="link" activeClassName="activelink">Bug Reports</Link>
+            <NavLink to="/" className="link" activeClassName="activelink">Home</NavLink>
+            <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
+            <NavLink to="/report" className="link" activeClassName="activelink">Bug Reports</NavLink>
           </div>
           <Switch>
             <Route exact path="/" component={Home} />
