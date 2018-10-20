@@ -51,14 +51,8 @@ const NotFound = () => (
   </div>
 );
 
-const ReportSuccess = () => (
-  <div>
-    <h2>Thanks For Submitting Your Report. (Please note that being on this page does not mean you submitted the form, only that you were brought to this link)</h2>
-  </div>
-);
-
 const Report = ({ match }) => (
-  <form name="bug reports" method="POST" action="/report" netlify>
+  <form name="bug reports" method="POST" action="/formconfirmation" netlify>
     <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
     <br />
     <button type="submit" value="Submit bug report">Tell Us!</button>
