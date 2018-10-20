@@ -16,7 +16,7 @@ class App extends Component {
             <ShowMOTD />
           </div>
           <div className="bottombar">
-            <NavLink exact to="/" className="link" activeClassName="activelink">Home</NavLink>
+            <NavLink exact strict to="/" className="link" activeClassName="activelink">Home</NavLink>
             <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
             <NavLink to="/report" className="link" activeClassName="activelink">Bug Reports</NavLink>
           </div>
