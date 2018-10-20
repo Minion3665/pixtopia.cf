@@ -1,7 +1,6 @@
 import url from 'url';
 import React, { Component } from 'react';
 import './App.css';
-import './PageContent.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -38,7 +37,9 @@ class ShowMOTD extends Component {
 class App extends Component {
   render() {
     return (
-      <b>Hello</b>
+      <Router>
+        <Route path="/hello" component={ShowMOTD}/>
+      </Router>
     );
   }
 }
