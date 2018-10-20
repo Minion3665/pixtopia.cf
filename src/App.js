@@ -57,7 +57,6 @@ const Report = ({ match }) => (
       <br />
       <button type="submit" value="Submit bug report">Tell Us!</button>
     </form>
-    <a href="/formconfirmation.html">test link (do not use)</a>
   </React.Fragment>
 );
 
