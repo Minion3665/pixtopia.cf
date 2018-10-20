@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render () {
     return (
-      <Router>
+      <Switch>
         <div>
           <ul>
             <li>
@@ -15,7 +15,7 @@ class App extends Component {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/topics">Topics</Link>
+              <Link to="/topics">Report A Bug</Link>
             </li>
           </ul>
     
@@ -24,8 +24,9 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
+          <Route component={NotFound} />
         </div>
-      </Router>
+      </Switch>
     );
   }
 }
@@ -39,6 +40,12 @@ const Home = () => (
 const About = () => (
   <div>
     <h2>About</h2>
+  </div>
+);
+
+const NotFound = () => (
+  <div>
+    <h2>404 Error. Page Not Found</h2>
   </div>
 );
 
