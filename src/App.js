@@ -5,19 +5,19 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-ro
 class App extends Component {
   render () {
     return (
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/report" component={Report} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/report" component={Report} />
+          <Route component={NotFound} />
+        </Switch>
         <div className="bottombar">
           <Link to="/" activeClassName="activelink">Home</Link>
           <Link to="/about" activeClassName="activelink">About Pixtopia</Link>
           <Link to="/report" activeClassName="activelink">Bug Reports</Link>
         </div>
+      </Router>
     );
   }
 }
