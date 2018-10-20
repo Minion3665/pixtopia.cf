@@ -21,7 +21,7 @@ class App extends Component {
             <NavLink to="/report" className="link" activeClassName="activelink">Bug Reports</NavLink>
           </div>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact strict path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/report" component={Report} />
             <Route path="/reportsuccess" component={ReportSuccess} />
@@ -32,6 +32,7 @@ class App extends Component {
     );
   }
 }
+
 const Home = () => (
   <div>
     <h2>Home</h2>
