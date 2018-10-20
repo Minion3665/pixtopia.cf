@@ -6,17 +6,17 @@ class App extends Component {
   render () {
     return (
       <Router>
+        <div>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Pixtopia</Link>
+          <Link to="/report">Bug Reports</Link>
+        </div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/report" component={Report} />
           <Route component={NotFound} />
         </Switch>
-        <div className="bottombar">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Pixtopia</Link>
-          <Link to="/report">Bug Reports</Link>
-        </div>
       </Router>
     );
   }
