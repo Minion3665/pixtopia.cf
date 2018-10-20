@@ -8,15 +8,15 @@ class App extends Component {
       <Router>
         <div>
           <Link to="/">Home</Link>
-          <Link to="/about">About Pixtopia</Link>
-          <Link to="/report">Bug Reports</Link>
+          <Link to="/about">About</Link>
+          <Link to="/topics">Report A Bug</Link>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/report" component={Report} />
-          <Route component={NotFound} />
-        </Switch>
       </Router>
     );
   }
