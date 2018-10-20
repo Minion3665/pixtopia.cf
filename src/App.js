@@ -5,29 +5,31 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-ro
 class App extends Component {
   render () {
     return (
-      <Router>
+      <React.Fragment>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/topics">Report A Bug</Link>
-            </li>
-          </ul>
-    
-          <hr />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
-            <Route component={NotFound} />
-          </Switch>
+          <div className="header">
+            <font size="20" color="#aa0000">Welcome To Pixtopia</font><br />
+            <ShowMOTD />
+          </div>
+          <div className="header2">
+            <font size="20" color="#aa0000">Welcome To Pixtopia</font><br />
+            <ShowMOTD />
+          </div>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/report" component={BugReport} />
+              <Route component={NotFound} />
+            </Switch>
+          </Router>
         </div>
-      </Router>
+        <div className="bottombar">
+          <Link to="/" className="link" activeClassName="activelink">Home</Link>
+          <Link to="/about" className="link" activeClassName="activelink">About Pixtopia</Link>
+          <Link to="/report" className="link" activeClassName="activelink">Bug Reports</Link>
+        </div>
+      </React.Fragment>
     );
   }
 }
@@ -50,7 +52,7 @@ const NotFound = () => (
   </div>
 );
 
-const Topics = ({ match }) => (
+const Report = ({ match }) => (
   <div>
     <h2>Topics</h2>
     <ul>
