@@ -13,3 +13,4 @@ const Routes = (props) => (
     </Route>
   </Router>
 );
+export default Routes;
