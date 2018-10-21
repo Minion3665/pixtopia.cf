@@ -23,7 +23,6 @@ class App extends Component {
           <Switch>
             <Route exact strict path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/confirm.html" component={OfflineDisabled} />
             <Route path="/report.html" component={OfflineDisabled} />
             <Route component={NotFound} />
           </Switch>
@@ -48,6 +47,12 @@ const About = () => (
 const NotFound = () => (
   <div>
     <h2>404 Error. Page Not Found</h2>
+  </div>
+);
+
+const OfflineDisabled = () => (
+  <div>
+    <h2>This is disabled offline, Sorry for any inconvenience caused</h2>
   </div>
 );
 
