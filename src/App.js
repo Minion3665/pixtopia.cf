@@ -23,7 +23,6 @@ class App extends Component {
           <Switch>
             <Route exact strict path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/report" component={Report} />
             <Route component={NotFound} />
           </Switch>
         </div>
@@ -48,16 +47,6 @@ const NotFound = () => (
   <div>
     <h2>404 Error. Page Not Found</h2>
   </div>
-);
-
-const Report = ({ match }) => (
-  <React.Fragment>
-    <form name="bug reports" method="POST" action="https://pixtopia.cf/formconfirmation.html" netlify>
-      <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
-      <br />
-      <button type="submit" value="Submit bug report">Tell Us!</button>
-    </form>
-  </React.Fragment>
 );
 
 class ShowMOTD extends Component {
