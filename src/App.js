@@ -23,6 +23,8 @@ class App extends Component {
           <Switch>
             <Route exact strict path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/confirm.html" component={OfflineDisabled} />
+            <Route path="/report.html" component={OfflineDisabled} />
             <Route component={NotFound} />
           </Switch>
         </div>
