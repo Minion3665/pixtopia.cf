@@ -28,7 +28,6 @@
         background: #eee;
         padding: 40px 60px;
         border-radius: 6px;
-        width: 40em;
         margin: 50px auto;
         max-width: 100%;
       }
@@ -38,6 +37,9 @@
       }
       a:hover {
         text-decoration: underline;
+      }
+      textarea {
+        resize: none;
       }
     </style>
   </head>
@@ -54,6 +56,8 @@
             <form name="bug reports" method="POST" action="https://pixtopia.cf/formconfirmation.html" netlify>
               <textarea name="report text" rows="10" cols="100" placeholder="Please provide a detailed explanation of the bug including steps to reproduce it, what happens, and links to screenshots if possible. You may also include a contact email or any other information that might be useful..." autofocus required></textarea>
               <br />
+              <br />
+              <button type="button "onclick="window.location('');" value="Cancel">Back To Home</button>
               <button type="submit" value="Submit bug report">Tell Us!</button>
             </form>
           </p>
