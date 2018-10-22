@@ -27,8 +27,8 @@
       },
       active:"xhr"
     },
-    checkOnLoad:!1,
-    interceptRequests:!0,
+    checkOnLoad:true,
+    interceptRequests:true,
     reconnect:!0,
     deDupBody:!1
   }, grab = function(obj, key) {
