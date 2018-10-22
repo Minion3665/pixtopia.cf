@@ -8,8 +8,8 @@ import './offline/offline-language.css';
 class App extends Component {
   render () {
     let reportlink = null;
-    Offline.check();
-    if (Offline.state == "down") {
+    offline.Offline.check();
+    if (offline.Offline.state == "down") {
       reportlink = "/disabled";
     } else {
       reportlink = "/report.html";
