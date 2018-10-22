@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { NetInfo } from 'react-native';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
 
 class App extends Component {
   render () {
-    let reportlink = null;
     return (
       <Router>
         <div>
+          <OfflineMessage />
           <div className="header">
             <font size="20" color="#aa0000">Welcome To Pixtopia</font><br />
             <ShowMOTD />
@@ -34,9 +35,34 @@ class App extends Component {
 }
 
 class OfflineMessage extends Component {
-  render () {
-    return (
-      <div className="noConnection">No Internet Connection</div>
+  state = {
+    isConnected: true
+  };
+
+  componentDidMount() {
+    NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectivityChange);
+  }
+
+  componentWillUnmount() {
+    NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectivityChange);
+  }
+
+  handleConnectivityChange = isConnected => {
+    if (isConnected) {
+      this.setState({ isConnected });
+    } else {
+      this.setState({ isConnected });
+    }
+  };
+
+  render() {
+    if (!this.state.isConnected) {
+      return (
+        <div className="noConnection">No Internet Connection</div>
+      );
+    }
+    return(
+      null
     );
   }
 }
