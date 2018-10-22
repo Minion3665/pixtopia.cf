@@ -46,6 +46,17 @@
     text-align: center;
 }
 
+.noConnection {
+    display: block;
+    top: 1vw;
+    left: 1vw;
+    width: 98vw;
+    height: 5vw;
+    text-align: center;
+    color: white;
+    background-color: #ff0000;
+}
+
 textarea {
   resize: none;
 }
