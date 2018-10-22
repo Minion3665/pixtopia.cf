@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { NetInfo } from 'react-native';
+import React, { Component, NetInfo } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
 
