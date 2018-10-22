@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
-import './offline/offline';
+import './offline/offline' as Offline;
 import './offline/offline-theme.css';
 import './offline/offline-language.css';
 
 class App extends Component {
   render () {
     let reportlink = null;
-    offline.Offline.check();
-    if (offline.Offline.state == "down") {
+    Offline.Offline.check();
+    if (Offline.Offline.state == "down") {
       reportlink = "/disabled";
     } else {
       reportlink = "/report.html";
