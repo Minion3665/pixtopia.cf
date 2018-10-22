@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
-import Offline from './offline/offline';
-import './offline/offline-theme.css';
-import './offline/offline-language.css';
 
 class App extends Component {
   render () {
     let reportlink = null;
-    Offline.check();
-    if (Offline.state == "down") {
-      reportlink = "/disabled";
-    } else {
-      reportlink = "/report.html";
-    }
     return (
       <Router>
         <div>
@@ -38,6 +29,14 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
+    );
+  }
+}
+
+class OfflineMessage extends Component {
+  render () {
+    return (
+      <div className="noConnection">No Internet Connection</div>
     );
   }
 }
