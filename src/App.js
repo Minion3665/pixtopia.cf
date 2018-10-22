@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
-import 'https://pixtopia.cf/offline/offline';
-import 'https://pixtopia.cf/offline/offline-theme.css';
-import 'https://pixtopia.cf/offline/offline-language.css';
+import './offline/offline';
+import './offline/offline-theme.css';
+import './offline/offline-language.css';
 
 class App extends Component {
   render () {
