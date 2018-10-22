@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import 'https://pixtopia.cf/offline/offline';
+import 'https://pixtopia.cf/offline/offline-theme.css';
+import 'https://pixtopia.cf/offline/offline-language.css';
 
 class App extends Component {
   render () {
+    let reportlink = null;
+    Offline.check();
+    if (Offline.state == "down") {
+      reportlink = "/disabled";
+    } else {
+      reportlink = "/report.html";
+    }
     return (
       <Router>
         <div>
@@ -18,12 +28,12 @@ class App extends Component {
           <div className="bottombar">
             <NavLink exact strict to="/" className="link" activeClassName="activelink">Home</NavLink>
             <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
-            <a href="/report.html" className="link">Bug Reports</a>
+            <NavLink to="/report.html" activeClassName="activelink" className="link">Bug Reports</a>
           </div>
           <Switch>
             <Route exact strict path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/report.html" component={OfflineDisabled} />
+            <Route path="/disabled" component={OfflineDisabled} />
             <Route component={NotFound} />
           </Switch>
         </div>
