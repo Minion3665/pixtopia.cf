@@ -20,7 +20,8 @@ class App extends Component {
           <div className="bottombar">
             <NavLink exact strict to="/" className="link" activeClassName="activelink">Home</NavLink>
             <NavLink to="/about" className="link" activeClassName="activelink">About Pixtopia</NavLink>
-            <NavLink to="/report.html" activeClassName="activelink" className="link">Bug Reports</NavLink>
+            <Offline><NavLink to="/disabled" activeClassName="activelink" className="link">Bug Reports</NavLink></Offline>
+            <Online><a href="https://pixtopia.cf/reports.html" class="link">Bug Reports</a></Online>
           </div>
           <Switch>
             <Route exact strict path="/" component={Home} />
