@@ -1,6 +1,7 @@
-import React, { Component, NetInfo } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { Offline, Online, Detector } from "react-detect-offline";
 
 class App extends Component {
   render () {
@@ -34,34 +35,9 @@ class App extends Component {
 }
 
 class OfflineMessage extends Component {
-  state = {
-    isConnected: true
-  };
-
-  componentDidMount() {
-    NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectivityChange);
-  }
-
-  componentWillUnmount() {
-    NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectivityChange);
-  }
-
-  handleConnectivityChange = isConnected => {
-    if (isConnected) {
-      this.setState({ isConnected });
-    } else {
-      this.setState({ isConnected });
-    }
-  };
-
   render() {
-    if (!this.state.isConnected) {
-      return (
-        <div className="noConnection">No Internet Connection</div>
-      );
-    }
-    return(
-      null
+    return (
+        <Offline><div className="noConnection">No Internet Connection</div></Offline>
     );
   }
 }
