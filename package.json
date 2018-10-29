@@ -7,7 +7,7 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "react-router-dom": "4.3.1",
-    "react-detect-offline": 2.1.2"
+    "react-detect-offline": "2.1.2"
   },
   "scripts": {
     "start": "run-p start:**",
