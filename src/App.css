@@ -48,6 +48,7 @@
 
 .noConnection {
     display: block;
+    position: fixed;
     top: 1vw;
     left: 1vw;
     width: 98vw;
@@ -55,6 +56,8 @@
     text-align: center;
     color: white;
     background-color: #ff0000;
+    border-radius: 10px;
+    z-index: 100;
 }
 
 textarea {
