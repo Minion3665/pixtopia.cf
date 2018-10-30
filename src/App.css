@@ -9,6 +9,10 @@
     text-align: center;
     color: #aaaadf;
 }
+.offlineMotd {
+    font-size: 4vmin;
+    color: red;
+}
 
 .bottombar {
     text-align: center;
