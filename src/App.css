@@ -77,8 +77,9 @@ textarea {
   font-size: 5vmin;
 }
 .motd {
-  font-size: 2vmin;
+  font-size: 4vmin;
 }
 body {
   background-color: #aaaaff;
+  font-size: 3vmin;
 }
