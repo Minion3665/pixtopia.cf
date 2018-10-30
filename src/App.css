@@ -79,3 +79,6 @@ textarea {
 .motd {
   font-size: 2vmin;
 }
+body {
+  background-color: #aaaaff;
+}
