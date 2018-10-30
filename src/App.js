@@ -22,12 +22,12 @@ class App extends Component {
           <div className="header">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
             <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
-            <Offline><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Offline>
+            <Offline><b className="offlineMotd">Running In Offline Mode. Some Functions Are Disabled</b></Offline>
           </div>
           <div className="header2">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
             <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
-            <Offline><b className="motd">Running In Offline Mode</b></Offline>
+            <Offline><b className="offlineMotd">Running In Offline Mode. Some Functions Are Disabled</b></Offline>
           </div>
           <div className="bottombar">
             <NavLink exact strict to="/" className="link" activeClassName="activelink">Home</NavLink>
