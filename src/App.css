@@ -23,13 +23,14 @@
 
 .link {
     display: inline-block;
-    border: 1px solid #ff0000;
+    border: 1px solid #aaaadf;
+    background-color: #8888df;
     border-radius: 3px;
     padding: 3px;
     text-align: center;
     text-decoration: none;
     margin: 2px;
-    color: #D4AF37;
+    color: #aaaadf;
 }
 
 .activelink {
