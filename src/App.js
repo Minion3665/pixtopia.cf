@@ -4,18 +4,30 @@ import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react
 import { Offline, Online, Detector } from "react-detect-offline";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {msg: "Searching For MOTD", status: "In Development"};
+  }
+  componentDidMount() {
+    const { loading, msg } = this.state;
+    this.setState({ loading: true});
+    fetch('/.netlify/functions/getMotd')
+      .then(response => response.json())
+      .then(json => this.setState({ msg: json.msg, status: this.state.status }));
+  };
   render () {
     return (
       <Router>
         <div>
-          <OfflineMessage />
           <div className="header">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
-            <ShowMOTD />
+            <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
+            <Offline><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Offline>
           </div>
           <div className="header2">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
-            <ShowMOTD />
+            <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
+            <Offline><b className="motd">Running In Offline Mode</b></Offline>
           </div>
           <div className="bottombar">
             <NavLink exact strict to="/" className="link" activeClassName="activelink">Home</NavLink>
@@ -33,14 +45,6 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-    );
-  }
-}
-
-class OfflineMessage extends Component {
-  render() {
-    return (
-        <Offline><div className="noConnection">No Internet Connection</div></Offline>
     );
   }
 }
@@ -68,32 +72,5 @@ const OfflineDisabled = () => (
     <h2>This is disabled offline, Sorry for any inconvenience caused</h2>
   </div>
 );
-
-class ShowMOTD extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: false, msg: null };
-  }
- 
-  componentDidMount() {
-    const { loading, msg } = this.state;
-    if ({msg}.msg === null) {
-      this.setState({ loading: true});
-      fetch('/.netlify/functions/getMotd')
-        .then(response => response.json())
-        .then(json => this.setState({ loading: false, msg: json.msg }));
-    }
-  };
- 
-  render() {
-    const { loading, msg } = this.state;
-    document.title = "Welcome to Pixtopia - MOTD: "+{msg}.msg;
-    return (
-      <React.Fragment>
-        <b className="motd">Status: Under Development, Motd: {msg}</b>
-      </React.Fragment>
-    );
-  }
-}
 
 export default App;
