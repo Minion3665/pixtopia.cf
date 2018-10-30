@@ -10,11 +10,11 @@ class App extends Component {
         <div>
           <OfflineMessage />
           <div className="header">
-            <font size="5vw">Welcome To Pixtopia</font><br />
+            <font size="10vh">Welcome To Pixtopia</font><br />
             <ShowMOTD />
           </div>
           <div className="header2">
-            <font size="5vw">Welcome To Pixtopia</font><br />
+            <font size="10vh">Welcome To Pixtopia</font><br />
             <ShowMOTD />
           </div>
           <div className="bottombar">
@@ -90,7 +90,7 @@ class ShowMOTD extends Component {
     document.title = "Welcome to Pixtopia - MOTD: "+{msg}.msg;
     return (
       <React.Fragment>
-        <b>Status: Under Development, Motd: {msg}</b>
+        <b><font size="5vh">Status: Under Development, Motd: {msg}</font></b>
       </React.Fragment>
     );
   }
