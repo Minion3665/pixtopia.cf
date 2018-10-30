@@ -10,11 +10,11 @@ class App extends Component {
         <div>
           <OfflineMessage />
           <div className="header">
-            <div className="welcomeMessage">Welcome To Pixtopia</div><br />
+            <div className="welcomeMessage">Welcome To Pixtopia</div>
             <ShowMOTD />
           </div>
           <div className="header2">
-            <div className="welcomeMessage">Welcome To Pixtopia</div><br />
+            <div className="welcomeMessage">Welcome To Pixtopia</div>
             <ShowMOTD />
           </div>
           <div className="bottombar">
