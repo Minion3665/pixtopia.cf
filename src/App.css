@@ -73,3 +73,9 @@
 textarea {
   resize: none;
 }
+.welcomeMessage {
+  font-size: 20vw;
+}
+.motd {
+  font-size: 10vw;
+}
