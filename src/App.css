@@ -14,7 +14,7 @@
     text-align: center;
     display: block;
     background-color: #0000a5;
-    color: #dddddf;
+    color: #aaaadf;
     border-radius: 5px 5px 0px 0px;
     position: fixed;
     bottom: 0;
@@ -31,7 +31,7 @@
     text-align: center;
     text-decoration: none;
     margin: 2px;
-    color: #dddddf;
+    color: #aaaadf;
 }
 
 .activelink {
@@ -80,6 +80,6 @@ textarea {
   font-size: 4vmin;
 }
 body {
-  background-color: #eeeeff;
+  background-color: #ddddff;
   font-size: 3vmin;
 }
