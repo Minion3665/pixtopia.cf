@@ -13,6 +13,11 @@
       "type": "image/x-icon",
       "density": 1.0
     }
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+    }
   ],
   "start_url": "./",
   "display": "standalone",
