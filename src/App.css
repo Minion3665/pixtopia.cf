@@ -74,8 +74,8 @@ textarea {
   resize: none;
 }
 .welcomeMessage {
-  font-size: 5vw;
+  font-size: 5vmin;
 }
 .motd {
-  font-size: 2vw;
+  font-size: 2vmin;
 }
