@@ -21,6 +21,7 @@ class App extends Component {
   };
 
   render () {
+    var currentMsg;
     if (this.state.msg == null) {
       currentMsg = "Loading...";
       document.title="Welcome To Pixtopia!";
