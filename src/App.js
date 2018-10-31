@@ -6,15 +6,14 @@ import { Offline, Online, Detector } from "react-detect-offline";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {msg: "Searching For MOTD", status: "In Development"};
+    this.state = {msg: null, status: "In Development"};
   }
   componentDidMount() {
     const { loading, msg } = this.state;
     this.setState({ loading: true});
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
-      .then(json => this.setState({ msg: json.msg, status: this.state.status }))
-      .then(json => document.title="Welcome To Pixtopia! MOTD: "+json.msg);
+      .then(json => this.setState({ msg: json.msg, status: this.state.status }));
   };
 
   reloadPage() {
@@ -22,17 +21,24 @@ class App extends Component {
   };
 
   render () {
+    if (this.state.msg == null) {
+      currentMsg = "Loading...";
+      document.title="Welcome To Pixtopia!";
+    } else {
+      currentMsg = this.state.msg;
+      document.title="Welcome To Pixtopia! MOTD: "+this.state.msg;
+    }
     return (
       <Router>
         <div>
           <div className="header">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
-            <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
+            <Online><b className="motd">Status: {this.state.status}, Motd: {currentMsg}</b></Online>
             <Offline><b className="offlineMotd">Running In Offline Mode. Some Functions Are Disabled</b></Offline>
           </div>
           <div className="header2">
             <div className="welcomeMessage">Welcome To Pixtopia</div>
-            <Online><b className="motd">Status: {this.state.status}, Motd: {this.state.msg}</b></Online>
+            <Online><b className="motd">Status: {this.state.status}, Motd: {currentMsg}</b></Online>
             <Offline><b className="offlineMotd">Running In Offline Mode. Some Functions Are Disabled</b></Offline>
           </div>
           <div className="bottombar">
