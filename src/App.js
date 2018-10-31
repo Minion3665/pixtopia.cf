@@ -52,6 +52,8 @@ class App extends Component {
 const Home = () => (
   <div>
     <h2>Home</h2>
+    Welcome To The Pixtopia Website!
+    
   </div>
 );
 
