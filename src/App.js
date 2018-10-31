@@ -16,6 +16,11 @@ class App extends Component {
       .then(json => this.setState({ msg: json.msg, status: this.state.status })).then(json => document.title="Welcome To Pixtopia! MOTD: "+json.msg);
   };
 
+  reloadPage: function() {
+      window.location.reload();
+    });
+  },
+
   render () {
     return (
       <Router>
@@ -37,7 +42,7 @@ class App extends Component {
             <Online><a href="https://pixtopia.cf/report.html" class="link">Bug Reports</a></Online>
             <Offline><NavLink to="/disabled" activeClassName="activelink" className="link">Join Our Discord!</NavLink></Offline>
             <Online><a href="https://discord.gg/JkqhJWK" class="link">Join Our Discord</a></Online>
-            <div className="updateButton" onClick="location.reload();">Click Here To Update!</div>
+            <div className="updateButton" onClick={this.reloadPage}>Click Here To Update!</div>
           </div>
           <Switch>
             <Route exact strict path="/" component={Home} />
