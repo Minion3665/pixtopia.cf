@@ -65,7 +65,6 @@ function registerValidSW(swUrl, config) {
               // the fresh content will have been added to the cache.
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
-              document.getElementsByClassName("hidden").className = "updateButton";
               console.log('New content is available; please refresh.');
               alert("We updated our website, Click the update button in the menu at the bottom of your screen or if you are on a browser you can also refresh the page, alternatively if you want to wait a while then that's fine too.");
               // Execute callback
