@@ -60,6 +60,7 @@ const Home = () => (
 const About = () => (
   <div>
     <h2>About</h2>
+    Pixtopia is an <b>unreleased</b> MMO game. In it you must take control of a small robot to climb towers and collect treasure to build your own tower. Sounds easy, right? Not quite as along your way there are many enemies and traps.
   </div>
 );
 
