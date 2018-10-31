@@ -47,7 +47,7 @@ class App extends Component {
             <Offline><NavLink to="/disabled" activeClassName="activelink" className="link">Bug Reports</NavLink></Offline>
             <Online><a href="https://pixtopia.cf/report.html" class="link">Bug Reports</a></Online>
             <Offline><NavLink to="/disabled" activeClassName="activelink" className="link">Join Our Discord!</NavLink></Offline>
-            <Online><a href="https://discord.gg/JkqhJWK" class="link">Join Our Discord</a></Online>
+            <Online><a href="https://discord.gg/JkqhJWK" class="link">Join Our Discord!</a></Online>
             <Online><div className="updateButton" onClick={this.reloadPage}>Check For And Install Updates</div></Online>
           </div>
           <Switch>
