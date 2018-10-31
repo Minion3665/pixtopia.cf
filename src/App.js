@@ -16,7 +16,7 @@ class App extends Component {
       .then(json => this.setState({ msg: json.msg, status: this.state.status })).then(json => document.title="Welcome To Pixtopia! MOTD: "+json.msg);
   };
 
-  reloadPage: function() {
+  reloadPage() {
       window.location.reload();
     });
   },
