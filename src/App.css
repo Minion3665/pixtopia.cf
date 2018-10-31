@@ -38,6 +38,22 @@
     color: #aaaadf;
 }
 
+.hidden {
+    display: none;
+}
+
+.update {
+    display: inline-block;
+    border: 1px solid #ffff66;
+    background-color: #ffff00;
+    border-radius: 3px;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+    color: #333300;
+}
+
 .activelink {
     border: 1px solid #00ff00;
 }
