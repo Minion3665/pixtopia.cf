@@ -13,7 +13,7 @@ class App extends Component {
     this.setState({ loading: true});
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
-      .then(json => this.setState({ msg: json.msg, status: this.state.status })).then(document.title="Welcome To Pixtopia! MOTD: "+json.msg);
+      .then(json => this.setState({ msg: json.msg, status: this.state.status })).then(json => document.title="Welcome To Pixtopia! MOTD: "+json.msg);
   };
 
   render () {
