@@ -42,7 +42,7 @@
     display: none;
 }
 
-.update {
+.updateButton {
     display: inline-block;
     border: 1px solid #ffff66;
     background-color: #ffff00;
