@@ -18,7 +18,7 @@ class App extends Component {
 
   reloadPage() {
     window.location.reload();
-  }
+  };
 
   render () {
     return (
