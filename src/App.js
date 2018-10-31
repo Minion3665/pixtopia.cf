@@ -14,7 +14,9 @@ class App extends Component {
     fetch('/.netlify/functions/getMotd')
       .then(response => response.json())
       .then(json => this.setState({ msg: json.msg, status: this.state.status }));
+    document.title="Welcome To Pixtopia! MOTD: "+this.state.msg;
   };
+
   render () {
     return (
       <Router>
