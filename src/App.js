@@ -52,8 +52,9 @@ class App extends Component {
 const Home = () => (
   <div>
     <h2>Home</h2>
-    Welcome To The Pixtopia Website!
-    
+    Welcome To The Pixtopia Website!<br/>
+    This is the official pixtopia website, find information, useful links, <del>downloads</del>(coming soon) and more!
+    If you are on a mobile device then you can add us to your home screen! We even work offline.
   </div>
 );
 
