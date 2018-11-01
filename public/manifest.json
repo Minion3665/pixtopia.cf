@@ -19,9 +19,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./",
+  "start_url": "https://pixtopia.cf",
   "display": "standalone",
   "theme_color": "#4444b6",
   "background_color": "#4444b6",
-  "scope": "."
+  "scope": "https://pixtopia.cf"
 }
