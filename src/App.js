@@ -8,10 +8,10 @@ class App extends Component {
   render () {
     return (
       <React.Fragment>      <div class="startinganimation">
-      <div class="text">The Kid's Snack Train</div>
-      <div class="text">The Delight Bar</div>
-      <div class="text">The Evening Delicacy Box</div>
-      <div class="text">Suprises in every box</div></a>
+      <div class="text snackDiv">The Kid's Snack Train</div>
+      <div class="text delightDiv">The Delight Bar</div>
+      <div class="text eveningDiv">The Evening Delicacy Box</div>
+      <div class="text supriseDiv">Suprises in every box</div></a>
       <div class="title">Treece & Turner</div>
       </React.Fragment>
     );
