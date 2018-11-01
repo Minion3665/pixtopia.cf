@@ -1,69 +1,106 @@
-@keyframes flyin {
-    from {opacity: 0.2; top: 12vw;}
-    to {opacity: 1; top: 4vw;}
-}
-.startinganimation {
+.header {
+    display: block;
+    background-color: #0000a5;
+    border-radius: 0px 0px 25px 25px;
     position: fixed;
-    top: 4vw;
-    animation-name: flyin;
-    animation-duration: 1s;
+    top: 0;
     left: 0;
-}
-a {
-    display: block;
-    height: 20vw;
-    width: 20vw;
-    word-wrap: break-word;
-    text-decoration: none;
-    color: #aaaaaa;
-    font-size: 3vw;
+    width: 100%;
     text-align: center;
- 
+    color: #aaaadf;
 }
-a:hover, a:active {
+.offlineMotd {
+    font-size: 4vmin;
+    color: red;
+}
+
+.bottombar {
+    text-align: center;
     display: block;
-    height: 20vw;
-    width: 20vw;
-    word-wrap: break-word;
+    background-color: #0000a5;
+    color: #aaaadf;
+    border-radius: 5px 5px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.link {
+    display: inline-block;
+    border: 1px solid #aaaadf;
+    background-color: #0000df;
+    border-radius: 3px;
+    padding: 3px;
+    text-align: center;
     text-decoration: none;
-    color: white;
-    font-size: 3vw;
+    margin: 2px;
+    color: #aaaadf;
+}
+
+.hidden {
+    display: none;
+}
+
+.updateButton {
+    display: inline-block;
+    border: 1px solid #ffff66;
+    background-color: #ffff00;
+    border-radius: 3px;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+    color: #333300;
+}
+
+.activelink {
+    border: 1px solid #00ff00;
+}
+
+.header2 {
+    display: block;
+    background-color: #aaaaaa;
+    border-radius: 0px 0px 25px 25px;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
     text-align: center;
 }
-.text {
-    margin-top: 50%;
-    transform: translate(0, -50%);
-}
-.title {
+
+.noConnection {
     display: block;
     position: fixed;
+    top: 1vw;
+    left: 1vw;
+    width: 98vw;
+    height: 5vw;
     text-align: center;
-    padding-left: 3vw;
-    transform: translate(0px, 24vw);
-    font-size: 20vw;
     color: white;
+    background-color: #ff0000;
+    border-radius: 10px;
+    z-index: 100;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes fadein {
+    from {opactiy: 0;}
+    to {opacity: 1;}
+}
+
+textarea {
+  resize: none;
+}
+.welcomeMessage {
+  font-size: 5vmin;
+}
+.motd {
+  font-size: 4vmin;
 }
 body {
-    background-color: #330000;
-    position: fixed;
+  background-color: #eeeeff;
+  font-size: 3vmin;
 }
-.snackDiv {
-    background-color: #ffff00;
-    position: fixed;
-    left: 4vw;
-}
-.delightDiv {
-    background-color: #aaffaa;
-    position: fixed;
-    left: 28vw;
-}
-.eveningDiv {
-    background-color: #ffaa00;
-    position: fixed;
-    left: 52vw;
-}
-.supriseDiv {
-    background-color: #009C59;
-    position: fixed;
-    left: 76vw;
-}
+
