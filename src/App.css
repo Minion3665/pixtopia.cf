@@ -31,8 +31,6 @@ a:hover, a:active {
     text-align: center;
 }
 .text {
-    margin-top: 50%;
-    transform: translate(0, -50%);
     display: table-cell; 
     vertical-align: middle; 
     text-align: center;
