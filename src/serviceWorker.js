@@ -66,7 +66,7 @@ function registerValidSW(swUrl, config) {
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
               console.log('New content is available; refreshing...');
-              location.reload();
+              window.location.reload();
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
