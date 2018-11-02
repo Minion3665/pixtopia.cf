@@ -54,7 +54,7 @@ body {
     left: 4vw;
 }
 .delightDiv {
-    background-color: #aaffaa;
+    background-color: #009C59;
     position: fixed;
     left: 28vw;
 }
@@ -64,7 +64,7 @@ body {
     left: 52vw;
 }
 .supriseDiv {
-    background-color: #009C59;
+    background-color: hotpink;
     position: fixed;
     left: 76vw;
 }
