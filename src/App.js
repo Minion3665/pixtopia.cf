@@ -10,10 +10,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <div class="startinganimation">
-          <div class="text snackDiv">The Kid's Snack Train</div>
-          <div class="text delightDiv">The Delight Bar</div>
-          <div class="text eveningDiv">The Evening Delicacy Box</div>
-          <div class="text supriseDiv">Suprises in every box</div>
+          <div class="snackDiv"><span class="text">The Kid's Snack Train</span></div>
+          <div class="delightDiv"><span class="text">The Delight Bar</span></div>
+          <div class="eveningDiv"><span class="text">The Evening Delicacy Box</span></div>
+          <div class="supriseDiv"><span class="text">Suprises in every box</span></div>
           <div class="title">Treece & Turner</div>
         </div>
       </React.Fragment>
