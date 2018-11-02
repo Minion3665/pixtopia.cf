@@ -38,7 +38,8 @@ a:hover, a:active {
     display: block;
     position: fixed;
     text-align: center;
-    transform: translate(0px, 24vw);
+    left: 50%;
+    transform: translate(-50%, 24vw);
     font-size: 20vw;
     color: white;
 }
