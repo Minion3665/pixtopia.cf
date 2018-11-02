@@ -14,7 +14,7 @@ class App extends Component {
           <a class="delightDiv"><span class="text">The Delight Bar</span></a>
           <a class="eveningDiv"><span class="text">The Evening Delicacy Box</span></a>
           <a class="supriseDiv"><span class="text">Suprises in every box</span></a>
-          <div class="title">Treece & Turner</div>
+          <div class="title">T & T</div>
         </div>
       </React.Fragment>
     );
