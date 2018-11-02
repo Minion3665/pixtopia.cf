@@ -16,7 +16,7 @@ a {
     word-wrap: break-word;
     text-decoration: none;
     color: black;
-    font-size: 3vw;
+    font-size: 5vw;
     text-align: center;
  
 }
@@ -27,7 +27,7 @@ a:hover, a:active {
     word-wrap: break-word;
     text-decoration: none;
     color: black;
-    font-size: 3vw;
+    font-size: 5vw;
     text-align: center;
 }
 .text {
