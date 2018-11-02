@@ -64,6 +64,18 @@ class App extends Component {
   }
 }
 
+class Authentication extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {auth: new GoTrue({APIUrl: "https://pixtopia.cf/.netlify/identity"})};
+  }
+  render () {
+    return (
+      <b>None</b>
+    );
+  }
+}
+
 const Home = () => (
   <div>
     <h2>Home</h2>
