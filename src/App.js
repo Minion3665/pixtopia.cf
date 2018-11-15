@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { Offline, Online, Detector } from "react-detect-offline";
+import GoTrue from "gotrue-js";
 
 class App extends Component {
   constructor(props) {
